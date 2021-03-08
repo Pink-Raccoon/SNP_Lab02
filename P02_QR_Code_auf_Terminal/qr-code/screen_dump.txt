@@ -1,0 +1,23 @@
+mkdir -p bin doc
+gcc -std=c99 -Wall -pedantic -g -MD -Isrc -Itests -I/home/vagrant/snp/testlib/include -DTARGET=/home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/bin/term-qr-code -static  -o /home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/bin/term-qr-code src/main.o     
+gcc -std=c99 -Wall -pedantic -g -MD -Isrc -Itests -I/home/vagrant/snp/testlib/include -DTARGET=/home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/bin/term-qr-code -static  -o /home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/tests/runtest tests/tests.o   -lcunit -L/home/vagrant/snp/testlib/lib -lsnptest
+#### /home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/tests/runtest built ####
+(cd tests; /home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/tests/runtest)
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: lab test
+  Test: test_empty_input ...passed
+  Test: test_black_and_white_input ...passed
+  Test: test_snp_input ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts  20667  20667  20667      0      n/a
+
+Elapsed time =    0.001 seconds
+#### /home/vagrant/snp/P02_QR_Code_auf_Terminal/qr-code/tests/runtest executed ####
